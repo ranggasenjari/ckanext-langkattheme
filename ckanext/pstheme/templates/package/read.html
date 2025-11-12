@@ -1,0 +1,8 @@
+{% ckan_extends %}
+
+{% block package_additional_info %}
+    {% block package_metadata_info %}
+        {% snippet "package/snippets/metadata_info.html", pkg_dict=pkg %}
+    {% endblock %}
+    {{ super() }}
+{% endblock %}

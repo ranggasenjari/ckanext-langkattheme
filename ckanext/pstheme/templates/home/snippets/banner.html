@@ -1,0 +1,25 @@
+{% set tags = h.get_facet_items_dict('tags', c.search_facets, limit=3) %}
+{% set site_title = g.site_title %}
+{% set stats = h.get_site_statistics() %}
+
+<div class="module module-search module-banner module-narrow module-shallow box">
+    <div class="module-content search-form">
+        <!-- <div class="search-welcome">
+            <img src="/images/welcome.png" />
+        </div> -->
+        <div class="banner-label">
+            Data Kabupaten Langkat<br />
+            Dalam <strong>Satu Portal</strong>
+        </div>
+        <div class="banner-sublabel">
+            <a href="{{ h.url_for('dataset.search') }}">
+                <strong style="font-size: 1.4em;">{{ h.langkattheme_format_number(stats.dataset_count) }}</strong>
+                {{ _('dataset') if stats.dataset_count == 1 else _('datasets') }}
+            </a>
+            <a href="{{ h.url_for(controller='organization', action='index') }}">
+                <strong>{{ h.langkattheme_format_number(stats.organization_count) }}</strong>
+                {{ _("Instansi") }}
+            </a>
+        </div>
+    </div>
+</div>

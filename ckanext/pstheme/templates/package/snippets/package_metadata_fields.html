@@ -1,0 +1,5 @@
+{% ckan_extends %}
+
+{% block custom_fields %}
+    {% snippet 'snippets/langkattheme_custom_form_fields.html', extras=data.extras, errors=errors, limit=3 %}
+{% endblock %}

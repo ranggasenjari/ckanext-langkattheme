@@ -1,0 +1,46 @@
+{% ckan_extends %}
+
+{% block admin_form %}
+    {{ super() }}
+
+    {{ form.textarea('ckanext.langkattheme.visualization', id='field-ckanext.langkattheme.visualization', label=_('Visualisasi Data'),
+    value=data['ckanext.langkattheme.visualization'], error=errors['ckanext.langkattheme.visualization'], placeholder=_('Custom HTML for Visualization Data')) }}
+    {{ form.textarea('ckanext.langkattheme.metadata_fields', id='field-ckanext.langkattheme.metadata_fields', label=_('Field Metadata'),
+    value=data['ckanext.langkattheme.metadata_fields'], error=errors['ckanext.langkattheme.metadata_fields'], placeholder=_('Custom Metada Field dalam JSON')) }}
+{% endblock %}
+
+{% block secondary_content %}
+<div class="module module-narrow module-shallow">
+    <h2 class="module-heading">
+        <i class="fa fa-info-circle"></i>
+        {{ _('Site config options') }}
+    </h2>
+    <div class="module-content">
+        {% block admin_form_help %}
+            {% set about_url = h.url_for('home.about') %}
+            {% set home_url = h.url_for('home.index') %}
+            {% set docs_url = "http://docs.ckan.org/en/{0}/theming".format(g.ckan_doc_version) %}
+            {% trans %}
+            <p><strong>Site Title:</strong> This is the title of this Site instance
+                It appears in various places throughout Site.</p>
+            <p><strong>Custom Stylesheet:</strong> Define an alternative main CSS file.</p>
+            <p><strong>Site Tag Logo:</strong> This is the logo that appears in the
+                header of all the Site instance templates.</p>
+            <p><strong>About:</strong> This text will appear on this Site instances
+                <a href="{{ about_url }}">about page</a>.
+            </p>
+            <p><strong>Intro Text:</strong> This text will appear on this Site instances
+                <a href="{{ home_url }}">home page</a> as a welcome to visitors.
+            </p>
+            <p><strong>Custom CSS:</strong> This is a block of CSS that appears in
+                <code>&lt;head&gt;</code> tag of every page. If you wish to customize
+                the templates more fully we recommend
+                <!-- <a href="{{ docs_url }}" target="_blank" rel="noreferrer">reading the documentation</a>. -->
+            </p>
+            <p><strong>Homepage:</strong> This is for choosing a predefined layout for
+                the modules that appear on your homepage.</p>
+            {% endtrans %}
+        {% endblock %}
+        </div>
+    </div>
+{% endblock %}

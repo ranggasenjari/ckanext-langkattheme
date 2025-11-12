@@ -1,0 +1,60 @@
+<div role="main" class="hero">
+    <div class="container">
+        <div class="hero-content">
+            {% snippet 'home/snippets/banner.html' %}
+        </div>
+    </div>
+</div>
+
+{% block search %} {% snippet 'home/snippets/search_floating.html' %} {% endblock %}
+
+<div role="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="ps-box">
+                    <div class="ps-box-title">
+                        <h3>Topik Data</h3>
+                    </div>
+                    <div class="ps-box-content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="psmenu">
+                                    {% for group in h.langkattheme_group_list() %}
+                                    {% set type = group.type or 'group' %}
+                                    {% set url = h.url_for(type ~ '.read', id=group.name) %}
+                                    <a class="psmenu-item" href="{{ url }}"
+                                        title="{{ _('Lihat {name}').format(name=group.display_name) }}">
+                                        <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}"
+                                            alt="{{ group.name }}" />
+                                        <div class="psmenu-item-label">{{ group.display_name }}</div>
+                                    </a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ps-box-full ps-box-full-light">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="ps-box">
+                <div class="ps-box-title">
+                    <h3>Visualisasi Data</h3>
+                </div>
+                <div class="ps-box-content" style="min-height: 250px;">
+                    <div class="psvisualization">
+                        {% autoescape false %}
+                            {{ h.langkattheme_get_visualization() | replace("{_URL_STATIC_IMAGE_}", h.url_for('/images/')) }}
+                        {% endautoescape %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+{% ckan_extends %}
+
+{% if title == 'Organizations' %}
+    {% set title = 'Instansi' %}
+{% elif title == 'Groups' %}
+    {% set title = 'Sektor' %}
+{%- endif -%}
+
+{% block facet_list_heading %}
+<h2 class="module-heading">
+    <i class="fa fa-filter"></i>
+    {{ title }}
+</h2>
+{% endblock %}

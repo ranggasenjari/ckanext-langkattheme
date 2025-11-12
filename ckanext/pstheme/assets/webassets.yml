@@ -1,0 +1,14 @@
+langkattheme-js:
+  filter: rjsmin
+  output: ckanext-langkattheme/%(version)s-langkattheme.js
+  contents:
+    - langkattheme.js
+  extra:
+    preload:
+      - base/main
+
+langkattheme-css:
+  filter: cssrewrite
+  output: ckanext-langkattheme/%(version)s-langkattheme.css
+  contents:
+    - langkattheme.css

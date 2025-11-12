@@ -1,0 +1,10 @@
+{% ckan_extends %}
+
+{% block subtitle %}
+    {{ group_dict.display_name }} {{ g.template_title_delimiter }} {{ _('Sektor') }}
+{% endblock %}
+
+{% block breadcrumb_content %}
+  <li>{% link_for _('Sektor'), named_route=group_type+'.index' %}</li>
+  <li class="active">{% link_for group_dict.display_name|truncate(35), named_route=group_type+'.read', id=group_dict.name %}</li>
+{% endblock %}
