@@ -979,51 +979,46 @@ body {
     align-items: center;
     padding: 18px 20px;
     border-radius: 18px;
-    background: #fff;
+    background: #f7fafd;
     border: none;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 6px 24px rgba(44, 62, 80, 0.10);
+    transition: transform 0.25s, box-shadow 0.25s;
     min-height: 120px;
     position: relative;
     overflow: hidden;
-
-    /* Gambar background di kanan */
     background-image: var(--topic-bg);
     background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 40% auto;
+    background-position: right 28px center;
+    background-size: 80px auto;
+    /* fallback color, will be overridden by nth-child below */
 }
 
-/* Hover animasi floating */
-.topic-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+/* Abstrak shape di kanan card */
+.topic-card::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 44%;
+    height: 100%;
+    background: linear-gradient(120deg, #0BB451 60%, #1e90d6 100%);
+    clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 0.18;
+    z-index: 1;
+    pointer-events: none;
+    transition: opacity 0.2s;
 }
 
-/* Teks kiri */
-.topic-text {
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #676796;
-    width: 60%;
-    z-index: 2;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    background: transparent;
+.topic-card:hover::after {
+    opacity: 0.28;
 }
 
-/* Hilangkan elemen gambar lama */
-.topic-image-wrap {
-    display: none !important;
-    transform: rotate(8deg);
-}
-
-/* Background pastel otomatis */
-.topic-card:nth-child(5n+1) { background-color: #FFE9E2; }
-.topic-card:nth-child(5n+2) { background-color: #E8E6FF; }
-.topic-card:nth-child(5n+3) { background-color: #FFF6D3; }
-.topic-card:nth-child(5n+4) { background-color: #E8FFF4; }
-.topic-card:nth-child(5n+5) { background-color: #FFEFF8; }
+/* Warna background lebih tegas */
+.topic-card:nth-child(5n+1) { background-color: #eaf6f0; }
+.topic-card:nth-child(5n+2) { background-color: #eaf1fa; }
+.topic-card:nth-child(5n+3) { background-color: #f6f0ea; }
+.topic-card:nth-child(5n+4) { background-color: #f0eaf6; }
+.topic-card:nth-child(5n+5) { background-color: #f6eaea; }
 
 /* Responsif */
 @media (max-width: 600px) {
