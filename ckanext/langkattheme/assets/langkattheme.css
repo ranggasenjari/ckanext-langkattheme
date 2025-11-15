@@ -1003,7 +1003,7 @@ body {
     height: 100%;
     background: linear-gradient(120deg, #0BB451 60%, #1e90d6 100%);
     clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%);
-    opacity: 0.32;
+    opacity: 0.12;
     z-index: 2;
     pointer-events: none;
     transition: opacity 0.2s;
