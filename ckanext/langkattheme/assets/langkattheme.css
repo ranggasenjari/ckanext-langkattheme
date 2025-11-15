@@ -940,7 +940,7 @@ body {
 
 .psmenu-item-card {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     border-radius: 12px;
     overflow: hidden;
     text-decoration: none;
@@ -998,8 +998,8 @@ body {
 
 /* Teks kiri */
 .topic-text {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 0.9rem;
+    font-weight: 500;
     color: #333;
     width: 55%;
     z-index: 2;
