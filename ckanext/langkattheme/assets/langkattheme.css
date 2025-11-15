@@ -994,7 +994,7 @@ body {
 }
 
 /* Abstrak shape di kanan card */
-.topic-card::after {
+/* .topic-card::after {
     content: '';
     position: absolute;
     right: 0;
@@ -1007,7 +1007,7 @@ body {
     z-index: 1;
     pointer-events: none;
     transition: opacity 0.2s;
-}
+} */
 
 .topic-card:hover::after {
     opacity: 0.28;
