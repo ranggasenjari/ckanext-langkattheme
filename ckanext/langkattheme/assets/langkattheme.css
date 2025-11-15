@@ -988,8 +988,8 @@ body {
     overflow: hidden;
     background-image: var(--topic-bg);
     background-repeat: no-repeat;
-    background-position: right 28px center;
-    background-size: 80px auto;
+    background-position: right 15px center;
+    background-size: 88px auto;
     /* fallback color, will be overridden by nth-child below */
 }
 
@@ -1033,6 +1033,10 @@ body {
     }
 }
 
+    .topic-text {
+        width: 70%;
+        font-size: 1rem;
+    }
 .btn.btn-primary {
   background: linear-gradient(90deg, #0BB451 0%, #72C6EF 100%);
   color: #fff !important;
