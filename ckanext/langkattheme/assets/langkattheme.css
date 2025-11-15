@@ -999,10 +999,12 @@ body {
 /* Teks kiri */
 .topic-text {
     font-size: 0.9rem;
-    font-weight: 500;
-    color: #333;
+    font-weight: bold;
+    color: #676796;
     width: 55%;
     z-index: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 /* Container gambar kanan */
