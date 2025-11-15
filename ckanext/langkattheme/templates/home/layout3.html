@@ -25,11 +25,11 @@
                                     {% set url = h.url_for(type ~ '.read', id=group.name) %}
                                     <a class="psmenu-item-card" href="{{ url }}"
                                         title="{{ _('Lihat {name}').format(name=group.display_name) }}">
+                                        <div class="psmenu-card-label">{{ group.display_name }}</div>
                                         <div class="psmenu-card-image">
                                             <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}"
                                                 alt="{{ group.name }}" />
                                         </div>
-                                        <div class="psmenu-card-label">{{ group.display_name }}</div>
                                     </a>
                                     {% endfor %}
                                 </div>
