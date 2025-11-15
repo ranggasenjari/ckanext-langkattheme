@@ -58,14 +58,14 @@ body {
 /* End */
 
 .homepage .hero {
-  background: #0BB451;
+  background: #0b1eb4;
   color: #ffffff;
 
   height: 300px;
   padding: 0px;
 
 
-  background-image: url('/images/banner.png');
+  /* background-image: url('/images/banner.png'); */
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
@@ -228,7 +228,7 @@ body {
   right: 14%;
   width: 100%;
   height: calc(100% + 50px);
-  background: url('/images/banner-heading-bg.png');
+  /* background: url('/images/banner-heading-bg.png'); */
   background-position-x: right;
   background-position-y: top;
   background-repeat: no-repeat;
@@ -461,10 +461,10 @@ body {
   .homepage .hero {
     height: 400px;
   }
-  .homepage .hero {
+  /* .homepage .hero {
       background-image: url('/images/banner-mobile.png');
       background-size: contain;
-  }
+  } */
 
   .homepage .hero .hero-content {
     align-items: flex-start;
