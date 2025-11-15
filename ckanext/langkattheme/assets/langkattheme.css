@@ -258,8 +258,8 @@ body {
   width: 100%;
   row-gap: 5px;
   column-gap: 5px;
-  max-height: 310px;
-  overflow-y: scroll;
+  /* max-height: 310px; */
+  /* overflow-y: scroll; */
 }
 
 .psmenu .psmenu-item {
