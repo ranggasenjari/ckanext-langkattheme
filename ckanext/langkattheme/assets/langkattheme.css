@@ -1015,6 +1015,7 @@ body {
 /* Hilangkan elemen gambar lama */
 .topic-image-wrap {
     display: none !important;
+    transform: rotate(8deg);
 }
 
 /* Background pastel otomatis */
