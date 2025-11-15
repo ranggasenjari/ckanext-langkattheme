@@ -14,11 +14,11 @@
         <div class="banner-sublabel">
             <a href="{{ h.url_for('dataset.search') }}">
                 <strong style="font-size: 1.4em;">{{ h.langkattheme_format_number(stats.dataset_count) }}</strong>
-                {{ _('dataset') if stats.dataset_count == 1 else _('datasets') }}
+                {{ _('Daftar Data') if stats.dataset_count == 1 else _('Daftar Data') }}
             </a>
             <a href="{{ h.url_for(controller='organization', action='index') }}">
                 <strong>{{ h.langkattheme_format_number(stats.organization_count) }}</strong>
-                {{ _("Instansi") }}
+                {{ _("Produsen Data") }}
             </a>
         </div>
     </div>
