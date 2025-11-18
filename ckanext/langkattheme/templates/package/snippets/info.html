@@ -13,14 +13,14 @@ Example:
   {% if pkg %}
     <section id="package-info" class="module module-narrow">
       <div class="module context-info">
-        <div class="module-content">
+        <div class="module-content" style="display: none;">
           {% block package_info_inner %}
             {% block heading %}
               <h1 class="heading">{{ h.dataset_display_name(pkg) }}</h1>
             {% endblock %}
             {% block nums %}
               {% set num_followers = h.follow_count('dataset', pkg.id) %}
-              <div class="nums" style="display: none;">
+              <div class="nums">
                 <dl>
                   <dt>{{ _('Followers') }}</dt>
                   <dd>{{ h.SI_number_span(num_followers) }}</dd>
