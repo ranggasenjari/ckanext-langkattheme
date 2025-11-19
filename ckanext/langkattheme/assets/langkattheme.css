@@ -534,6 +534,11 @@ body {
   }
 }
 
+@media (max-width: 540px) {
+    aside .secondary .col-md-3 {
+       display: none;
+    }
+}
 @media (max-width: 375px) {
   .homepage .hero {
     height: 330px;
