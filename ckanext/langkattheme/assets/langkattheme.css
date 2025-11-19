@@ -488,6 +488,12 @@ body {
 }
 
 @media (max-width: 540px) {
+  .psmenu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+  }
+
   .homepage .hero {
     height: 330px;
     background-repeat: no-repeat;
@@ -1047,7 +1053,7 @@ body {
     .topic-card {
         flex-direction: row;
         padding: 15px;
-        background-size: 55% auto;
+        background-size: 30% auto;
     }
     .topic-text {
       width: 60%;
