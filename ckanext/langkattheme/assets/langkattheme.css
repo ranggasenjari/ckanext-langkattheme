@@ -949,10 +949,12 @@ body {
 }
 
 
-.psmenu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+@media (min-width: 600px){
+  .psmenu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+  }
 }
 
 .psmenu-item-card {
